@@ -1,2 +1,14 @@
-# -
-專案介紹 本專案為一款以 **Python** 撰寫的簡單互動式猜數字遊戲。   玩家需要猜測電腦隨機產生的數字，系統會提示「太大」或「太小」，直到猜對為止。  此專案主要用於： - 練習 Python 基礎語法 - 熟悉迴圈與條件判斷 - 學習使用 Markdown 撰寫 README
+import random
+
+answer = random.randint(1, 100)
+guess = 0
+
+while guess != answer:
+    guess = int(input("請輸入數字："))
+    
+    if guess > answer:
+        print("太大了")
+    elif guess < answer:
+        print("太小了")
+    else:
+        print("猜對了！")
